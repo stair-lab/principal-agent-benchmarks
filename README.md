@@ -30,9 +30,7 @@ make all     # writes outputs/figureN.{pdf,png}, outputs/tableN.tex
 
 `make all` runs only `analysis/` — the input is the shipped `data/*.csv` and
 `data/item_margins.parquet`. It does not require GPU access, the raw evaluation
-panels, or LLM API keys.
-
-Currently reproduced: Figures 2 and 3, Tables 1, 2, and 4.
+panels, or LLM API keys. Reproduces Figures 2 and 3, Tables 1, 2, and 4.
 
 ## Data files in `data/`
 
@@ -136,7 +134,7 @@ Set `LFS_BASE` to the directory holding the raw panels, then run
   title  = {Welfare, Improvability, and Noise: A Principal--Agent Theory of Optimal Benchmark Item Aggregation},
   author = {Haupt, Andreas and Hartenstein, Justin and Reuel, Anka and Kochenderfer, Mykel J. and Koyejo, Sanmi},
   year   = {2026},
-  note   = {Preprint. arXiv ID to be filled in.}
+  note   = {Preprint}
 }
 ```
 
