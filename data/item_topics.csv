@@ -1,0 +1,106 @@
+task,doc_id,topic
+mathqa,1372,calculating amount with increased interest rate
+mathqa,2086,sum of two-digit remainders in division
+mmlu_elementary_mathematics,373,calculating total from a percentage
+mmlu_moral_disputes,41,features of consequentialist moral theory
+arc_challenge,1060,safely disposing of an acid solution
+arc_challenge,1011,heat transfer causing ice cube melting
+mathqa,2243,calculating age distribution in a group
+hellaswag,821,performing tricks with trained dogs
+mmlu_public_relations,71,public relations communication theories
+mmlu_high_school_physics,120,calculating buoyancy and floating objects
+mmlu_medical_genetics,52,mapping and identifying genes in genetics
+mmlu_computer_security,43,vulnerability to injection attacks in security
+mmlu_moral_scenarios,346,moral judgment in ethical scenarios
+mmlu_professional_law,1035,home security service legal responsibilities
+mathqa,222,finding a number from a ratio and LCM
+mmlu_philosophy,147,Plato's theory of knowledge and Forms
+arc_challenge,489,independent variables on a graph
+mmlu_professional_accounting,18,implied warranty of fitness in sales
+mmlu_philosophy,295,characteristics of Da Vinci's Mona Lisa
+mmlu_moral_disputes,96,moral standing of nonhuman animals
+mmlu_professional_law,240,impeachment of witness testimony in court
+mmlu_moral_scenarios,183,moral judgments in ethical scenarios
+commonsense_qa,981,finding shelter for human survival
+mmlu_professional_accounting,17,modifying compilation report for financial statements
+mmlu_human_sexuality,3,Freudian concepts of human sexuality
+commonsense_qa,781,buying an expensive wristwatch celebration
+mmlu_high_school_geography,124,factors influencing migration decisions
+mmlu_high_school_government_and_politics,133,relationship between federal and state judiciaries
+mathqa,573,calculating employee weekly wages ratio
+commonsense_qa,1219,new construction building processes
+mmlu_management,82,time-frame of strategic plans in management
+mmlu_human_sexuality,94,Catholic Church stance on birth control
+mmlu_high_school_macroeconomics,216,causes of decrease in real GDP
+mmlu_elementary_mathematics,228,solving a simple algebraic equation
+mmlu_formal_logic,71,consistency of propositions in formal logic
+mmlu_high_school_geography,119,Hindu religious practices and beliefs
+mathqa,80,finding a digit for divisibility by 6
+mathqa,1951,calculating overlap in language readership
+mathqa,360,last digit of factorial sum exponentiation
+mathqa,2520,finding the product of two variables
+mathqa,313,total number of bees in hive
+mmlu_medical_genetics,22,inheritance pattern of G6PD deficiency
+mmlu_professional_psychology,452,differences between research and program evaluation
+mmlu_high_school_macroeconomics,18,increase in money demand factors
+mmlu_philosophy,253,Aquinas' views on pleasure and operation
+mmlu_nutrition,70,facial flushing and ALDH enzyme deficiency
+mmlu_professional_law,758,regulation of pharmaceutical product safety
+mmlu_conceptual_physics,145,calibration of a galvanometer for measurements
+mmlu_miscellaneous,690,unit of measurement for electric current
+mmlu_college_medicine,46,child psychology evaluation signs
+mmlu_high_school_mathematics,177,probability of divisibility by 2 and 3
+commonsense_qa,62,habitat and environment of crabs
+mmlu_marketing,2,end of the production period in marketing
+mmlu_security_studies,190,linking armed forces to environmental security
+mmlu_philosophy,275,Cicero's views on expedience and virtue
+mmlu_astronomy,28,significance of 1:2:4 resonance in moons
+hellaswag,9523,designing an ugly sweater with stickers
+agieval_aqua_rat,39,average speed calculation for a plane
+mathqa,993,total matches in knockout tournament
+hellaswag,8174,treatment options for chicken pox scars
+hellaswag,188,getting a belly button piercing experience
+arc_challenge,97,formation processes of sedimentary rocks
+piqa,680,opening a wrapped present
+hellaswag,6010,family-friendly Caribbean cruise options
+hellaswag,4323,using and choosing brow brushes
+hellaswag,9584,conducting teleseminars and conference calls
+hellaswag,4260,conditioning hair after shampooing
+hellaswag,3450,accessing adoption records by state law
+hellaswag,3185,making lemonade with sugar and water
+hellaswag,2183,basketball layup drill demonstration
+mmlu_college_physics,40,effect of voltage on energy dissipation
+mmlu_professional_medicine,20,abdominal pain and antibiotic treatment failure
+mmlu_high_school_mathematics,14,comparing numerical integration methods in calculus
+mmlu_college_medicine,27,acceleration of an object on an incline
+mmlu_nutrition,36,risk factors for oesophageal cancer
+mmlu_business_ethics,45,locus of control in business ethics
+mmlu_high_school_physics,11,balancing forces on a see-saw
+mmlu_conceptual_physics,41,bow waves and wave interference concepts
+mmlu_philosophy,5,Nagel's views on skeptical arguments in philosophy
+mmlu_virology,37,causes of HIV testing delays in Latinos
+hellaswag,6022,making homemade lip balm for Mother's Day
+mmlu_global_facts,38,South Korea GDP per capita growth 1950-2016
+hellaswag,5061,choosing jeans to appear taller
+mmlu_high_school_biology,37,genetic variability in populations
+mmlu_high_school_psychology,26,left cerebral hemisphere functions in psychology
+mmlu_moral_disputes,27,arguments for the death penalty effectiveness
+mmlu_college_physics,2,reversible thermodynamic process characteristics
+arc_challenge,224,main energy source in food chains
+arc_challenge,1107,foods rich in vitamin D for healing
+hellaswag,1771,clipping cat claws and handling pets
+mmlu_high_school_european_history,20,qualities of a Renaissance courtier
+hellaswag,3977,recognizing signs of emotional infidelity
+mmlu_international_law,9,treaty-based human rights mechanisms in law
+mmlu_computer_security,13,AH Protocol features in computer security
+mmlu_econometrics,2,leverage effect in econometric models
+arc_challenge,503,technology behind the first hearing aid
+agieval_sat_math,7,value of a fraction with variables
+mmlu_professional_accounting,21,calculating sales units for desired profit
+mmlu_high_school_european_history,34,philosophical themes in European literature
+mmlu_high_school_european_history,39,Galileo's observations of celestial bodies
+mmlu_world_religions,23,Korean religious imposition during Japanese occupation
+arc_challenge,247,wave transmission through solid objects
+commonsense_qa,26,weasel problem with chicken eggs location
+mmlu_marketing,48,collaborative learning in marketing
+hellaswag,199,mowing the lawn with a riding mower

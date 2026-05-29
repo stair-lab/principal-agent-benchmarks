@@ -1,0 +1,28 @@
+{"task_id": "mathqa_0300", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "making_decisions_solving_problems", "processing_information"], "rater": "A1"}
+{"task_id": "aqua_194", "perspective": "automation", "ranked_gwa_ids": ["making_decisions_solving_problems", "analyzing_data", "processing_information", "estimating_quantifiable_characteristics", "scheduling_work"], "rater": "A1"}
+{"task_id": "MCAS_2011_8_17694", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "judging_qualities", "making_decisions_solving_problems", "analyzing_data", "getting_information"], "rater": "A1"}
+{"task_id": "hellaswag_01964", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "judging_qualities", "making_decisions_solving_problems", "analyzing_data"], "rater": "A1"}
+{"task_id": "mathqa_2786", "perspective": "automation", "ranked_gwa_ids": ["processing_information", "updating_using_knowledge", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "piqa_0865", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "making_decisions_solving_problems", "judging_qualities", "evaluating_compliance", "establishing_maintaining_relationships"], "rater": "A1"}
+{"task_id": "1510f5183095466e4fe41b82501a9dd0", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "judging_qualities", "analyzing_data", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "mmlu_00520", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "analyzing_data", "making_decisions_solving_problems", "estimating_quantifiable_characteristics", "interpreting_information"], "rater": "A1"}
+{"task_id": "mathqa_0418", "perspective": "automation", "ranked_gwa_ids": ["making_decisions_solving_problems", "processing_information", "analyzing_data", "updating_using_knowledge"], "rater": "A1"}
+{"task_id": "aqua_147", "perspective": "automation", "ranked_gwa_ids": ["making_decisions_solving_problems", "analyzing_data", "processing_information", "updating_using_knowledge"], "rater": "A1"}
+{"task_id": "NYSEDREGENTS_2010_4_30", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "making_decisions_solving_problems", "evaluating_compliance", "estimating_quantifiable_characteristics", "updating_using_knowledge"], "rater": "A1"}
+{"task_id": "mmlu_08238", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "getting_information", "interpreting_information", "judging_qualities", "updating_using_knowledge"], "rater": "A1"}
+{"task_id": "MCAS_2005_5_24", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "updating_using_knowledge", "estimating_quantifiable_characteristics", "making_decisions_solving_problems", "getting_information"], "rater": "A1"}
+{"task_id": "hellaswag_00832", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "analyzing_data", "interpreting_information", "judging_qualities", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "178cb8153123716aa94f286b615149d4", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "judging_qualities", "estimating_quantifiable_characteristics", "analyzing_data", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "piqa_1491", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "updating_using_knowledge", "estimating_quantifiable_characteristics"], "rater": "A1"}
+{"task_id": "piqa_1379", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "making_decisions_solving_problems", "organizing_planning_prioritizing"], "rater": "A1"}
+{"task_id": "mathqa_0938", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "processing_information", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "Mercury_7189123", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "analyzing_data", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "hellaswag_02286", "perspective": "automation", "ranked_gwa_ids": ["judging_qualities", "updating_using_knowledge", "analyzing_data", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "mmlu_05925", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "interpreting_information", "getting_information", "judging_qualities", "updating_using_knowledge"], "rater": "A1"}
+{"task_id": "mmlu_06572", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "interpreting_information", "analyzing_data"], "rater": "A1"}
+{"task_id": "Mercury_7068513", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "analyzing_data", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "mathqa_0192", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "making_decisions_solving_problems", "processing_information"], "rater": "A1"}
+{"task_id": "mmlu_01519", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "analyzing_data"], "rater": "A1"}
+{"task_id": "mathqa_0574", "perspective": "automation", "ranked_gwa_ids": ["making_decisions_solving_problems", "analyzing_data", "processing_information"], "rater": "A1"}
+{"task_id": "0f0e339412f719a019bf373e6daf2530", "perspective": "automation", "ranked_gwa_ids": ["updating_using_knowledge", "analyzing_data", "making_decisions_solving_problems"], "rater": "A1"}
+{"task_id": "aqua_100", "perspective": "automation", "ranked_gwa_ids": ["analyzing_data", "making_decisions_solving_problems", "processing_information"], "rater": "A1"}

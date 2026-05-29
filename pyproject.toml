@@ -1,0 +1,27 @@
+[project]
+name = "replication-package"
+version = "0.1.0"
+description = "Replication package for the welfare/cost/noise benchmark audit paper"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+refresh-judge = [
+    # Only needed for `make refresh-judge`, which re-runs the LLM-as-judge.
+    "litellm>=1.50",
+    "lm-eval>=0.4.5",
+    "python-dotenv>=1.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []

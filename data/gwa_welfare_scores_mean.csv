@@ -1,0 +1,28 @@
+gwa,concept_id,n_tasks_wb,p_auto_mean,p_aug_mean,dropped,p_auto_15,p_aug_15
+"Organizing, Planning, and Prioritizing Work",organizing_planning_prioritizing,4,2.9083,3.0583,True,2.9083,3.0583
+Training and Teaching Others,training_teaching,4,2.7536,3.5125,True,2.7536,3.5125
+Staffing Organizational Units,staffing_organizational_units,5,2.7175,2.9762,False,2.7175,2.9762
+Updating and Using Relevant Knowledge,updating_using_knowledge,13,3.0744,2.7832,False,3.0744,2.7832
+Developing Objectives and Strategies,developing_objectives_strategies,14,2.9415,3.1147,False,2.9415,3.1147
+"Guiding, Directing, and Motivating Subordinates",guiding_directing_motivating,39,3.1135,3.1003,False,3.1135,3.1003
+"Judging the Qualities of Objects, Services, or People",judging_qualities,23,3.2008,3.0553,False,3.2008,3.0553
+"Communicating with Supervisors, Peers, or Subordinates",communicating_internally,20,3.0113,3.0348,False,3.0113,3.0348
+Providing Consultation and Advice to Others,providing_consultation,18,2.9902,2.8618,False,2.9902,2.8618
+Thinking Creatively,thinking_creatively,108,2.8981,2.9108,False,2.8981,2.9108
+Interpreting the Meaning of Information for Others,interpreting_information,15,2.7593,2.9787,False,2.7593,2.9787
+Making Decisions and Solving Problems,making_decisions_solving_problems,48,2.7189,2.9561,False,2.7189,2.9561
+"Monitoring Processes, Materials, or Surroundings",monitoring_processes,40,3.1789,2.8953,False,3.1789,2.8953
+Assisting and Caring for Others,assisting_caring,5,3.1256,2.8533,False,3.1256,2.8533
+Getting Information,getting_information,58,2.9148,2.717,False,2.9148,2.717
+Monitoring and Controlling Resources,monitoring_controlling_resources,15,2.9439,2.8244,False,2.9439,2.8244
+Analyzing Data or Information,analyzing_data,82,3.0802,2.998,False,3.0802,2.998
+Selling or Influencing Others,selling_influencing,6,2.7861,2.9222,False,2.7861,2.9222
+Documenting/Recording Information,documenting_recording,136,3.0921,2.7825,False,3.0921,2.7825
+Evaluating Information to Determine Compliance with Standards,evaluating_compliance,25,2.9459,2.8237,False,2.9459,2.8237
+Communicating with People Outside the Organization,communicating_externally,8,2.7208,2.7708,False,2.7208,2.7708
+Processing Information,processing_information,41,3.0313,2.7203,False,3.0313,2.7203
+"Estimating the Quantifiable Characteristics of Products, Events, or Information",estimating_quantifiable_characteristics,14,3.2824,2.6767,False,3.2824,2.6767
+Performing Administrative Activities,performing_administrative,15,3.096,2.7325,False,3.096,2.7325
+Performing for or Working Directly with the Public,performing_for_public,6,2.6667,2.85,False,2.6667,2.85
+Scheduling Work and Activities,scheduling_work,9,3.2832,2.7812,False,3.2832,2.7812
+Establishing and Maintaining Interpersonal Relationships,establishing_maintaining_relationships,1,3.5,2.0,True,3.5,2.0

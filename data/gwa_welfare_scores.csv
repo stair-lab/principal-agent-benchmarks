@@ -1,0 +1,28 @@
+gwa,concept_id,n_tasks_wb,p_auto,p_aug,breadth_raw,log_breadth,dropped,breadth,p_auto_15,p_aug_15,P_auto,P_aug
+"Organizing, Planning, and Prioritizing Work",organizing_planning_prioritizing,4,0.0,0.25,891019.4,13.7001,True,,,,,
+Training and Teaching Others,training_teaching,4,0.0,0.5,5453171.6,15.5117,True,,,,,
+Staffing Organizational Units,staffing_organizational_units,5,0.0,0.0,5059991.19,15.4369,False,1.6447,1.0,1.0,1.0,1.0
+Updating and Using Relevant Knowledge,updating_using_knowledge,13,0.3846,0.1538,13926228.15,16.4493,False,2.7246,4.5385,2.8462,3.6652,2.519
+Developing Objectives and Strategies,developing_objectives_strategies,14,0.2857,0.1429,16543871.8,16.6215,False,2.9083,3.6286,2.7143,3.2147,2.5536
+"Guiding, Directing, and Motivating Subordinates",guiding_directing_motivating,39,0.359,0.3333,26904965.65,17.1078,False,3.4271,4.3026,5.0,4.2568,4.851
+"Judging the Qualities of Objects, Services, or People",judging_qualities,23,0.4348,0.1739,24789035.6833,17.0259,False,3.3397,5.0,3.087,4.7424,3.1541
+"Communicating with Supervisors, Peers, or Subordinates",communicating_internally,20,0.25,0.25,36434666.8,17.411,False,3.7505,3.3,4.0,3.668,4.3206
+Providing Consultation and Advice to Others,providing_consultation,18,0.1667,0.1667,23307423.75,16.9643,False,3.2739,2.5333,3.0,2.653,3.0329
+Thinking Creatively,thinking_creatively,108,0.2222,0.1111,31598200.505,17.2686,False,3.5986,3.0444,2.3333,3.3147,2.6785
+Interpreting the Meaning of Information for Others,interpreting_information,15,0.0667,0.1333,5588268.2,15.5362,False,1.7507,1.6133,2.6,1.2933,1.7227
+Making Decisions and Solving Problems,making_decisions_solving_problems,48,0.0833,0.1875,50025236.2352,17.728,False,4.0886,1.7667,3.25,2.3868,3.8946
+"Monitoring Processes, Materials, or Surroundings",monitoring_processes,40,0.35,0.05,31755277.9833,17.2736,False,3.6039,4.22,1.6,4.3719,2.0246
+Assisting and Caring for Others,assisting_caring,5,0.4,0.0,13563850.3,16.4229,False,2.6965,4.68,1.0,3.7284,1.2615
+Getting Information,getting_information,58,0.2241,0.1207,64411808.2833,17.9808,False,4.3582,3.0621,2.4483,3.9088,3.2438
+Monitoring and Controlling Resources,monitoring_controlling_resources,15,0.0667,0.1333,34392531.45,17.3533,False,3.689,1.6133,2.6,2.0707,2.9755
+Analyzing Data or Information,analyzing_data,82,0.2317,0.1463,40508022.9217,17.517,False,3.8635,3.1317,2.7561,3.5991,3.2383
+Selling or Influencing Others,selling_influencing,6,0.1667,0.1667,2764688.55,14.8324,False,1.0,2.5333,3.0,1.2209,1.3369
+Documenting/Recording Information,documenting_recording,136,0.2574,0.0809,117561127.3667,18.5825,False,5.0,3.3676,1.9706,4.7772,3.0406
+Evaluating Information to Determine Compliance with Standards,evaluating_compliance,25,0.16,0.12,50222763.7333,17.732,False,4.0928,2.472,2.44,3.1063,3.0738
+Communicating with People Outside the Organization,communicating_externally,8,0.125,0.125,22141420.5667,16.913,False,3.2192,2.15,2.5,2.3118,2.5919
+Processing Information,processing_information,41,0.1951,0.0244,73529519.8183,18.1132,False,4.4994,2.7951,1.2927,3.7177,2.0371
+"Estimating the Quantifiable Characteristics of Products, Events, or Information",estimating_quantifiable_characteristics,14,0.2143,0.0,20819716.7,16.8514,False,3.1536,2.9714,1.0,2.9207,1.3751
+Performing Administrative Activities,performing_administrative,15,0.4,0.1333,37790509.7583,17.4476,False,3.7894,4.68,2.6,5.0,3.0405
+Performing for or Working Directly with the Public,performing_for_public,6,0.0,0.0,14126065.4,16.4635,False,2.7398,1.0,1.0,1.2722,1.2722
+Scheduling Work and Activities,scheduling_work,9,0.3333,0.0,27643892.4,17.1349,False,3.456,4.0667,1.0,4.085,1.4503
+Establishing and Maintaining Interpersonal Relationships,establishing_maintaining_relationships,1,1.0,0.0,492574.5,13.1074,True,,,,,
