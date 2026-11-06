@@ -141,3 +141,15 @@ Set `LFS_BASE` to the directory holding the raw panels, then run
 ## License
 
 MIT — see `LICENSE`.
+
+### Third-Party Assets
+
+| Asset | Source | License |
+|---|---|---|
+| WORKBank | huggingface.co/datasets/SALT-NLP/WORKBank | Not specified |
+| EvoLM | https://zhentingqi.github.io/internal/projects/EvoLM/ | Not specified |
+| PolyPythias | https://huggingface.co/collections/EleutherAI/polypythias | Apache 2.0 |
+| OLMES | github.com/allenai/olmes | Apache 2.0 |
+| O*NET | onetcenter.org | CC BY 4.0 (USDOL/ETA) |
+
+Assets without a specified license are not redistributed here and are only used for non-commercial research with attribution.
