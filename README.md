@@ -2,10 +2,11 @@
 
 Code and per-item data to reproduce all figures and tables in:
 
-> **Welfare, Improvability, and Noise: A Principal–Agent Theory of Optimal
+> **Welfare, Improvability, and Variance: A Principal–Agent Approach to Optimal
 > Benchmark Item Aggregation**
 > Andreas Haupt, Justin Hartenstein, Anka Reuel, Mykel J. Kochenderfer,
 > Sanmi Koyejo.
+> *NeurIPS 2026, Evaluations & Datasets Track.*
 
 ## Layout
 
@@ -130,17 +131,15 @@ Set `LFS_BASE` to the directory holding the raw panels, then run
 ## Citation
 
 ```bibtex
-@misc{haupt2026welfare,
-  title  = {Welfare, Improvability, and Noise: A Principal--Agent Theory of Optimal Benchmark Item Aggregation},
+@inproceedings{haupt2026welfare,
+  title  = {Welfare, Improvability, and Variance: A Principal--Agent Approach to Optimal Benchmark Item Aggregation},
   author = {Haupt, Andreas and Hartenstein, Justin and Reuel, Anka and Kochenderfer, Mykel J. and Koyejo, Sanmi},
-  year   = {2026},
-  note   = {Preprint}
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluations \& Datasets Track},
+  year      = {2026}
 }
-```
+ ```
 
-## License
-
-MIT — see `LICENSE`.
+## Licenses
 
 ### Third-Party Assets
 
