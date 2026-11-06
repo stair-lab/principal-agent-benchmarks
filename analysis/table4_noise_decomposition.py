@@ -3,7 +3,7 @@ Table 4: Per-family decomposition of seed-to-seed noise on the PolyPythias 410M
 panel — Bernoulli component + adversarial-filtering / margin component.
 
 Reads:
-  data/item_margins.parquet — per-item gold/runner-up margin summary across
+  data/item-level-evals/item_margins.parquet — per-item gold/runner-up margin summary across
                               the 8 seeds × 10 checkpoints (precomputed).
 
 Writes:
@@ -145,7 +145,7 @@ small seed-dependent perturbations in continuation log-likelihood routinely flip
 
 
 def main():
-    df = pd.read_parquet(DATA / "item_margins.parquet")
+    df = pd.read_parquet(DATA / "item-level-evals" / "item_margins.parquet")
     df["family"] = df["task"].map(normalize_family)
 
     out = family_summary(df)

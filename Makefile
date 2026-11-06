@@ -24,19 +24,19 @@ tables: $(TABLES)
 $(OUTDIR):
 	mkdir -p $(OUTDIR)
 
-$(OUTDIR)/figure2_gwa_loadings.pdf: analysis/figure2_gwa_quadrant.py data/judge_loadings.jsonl data/gwa_welfare_scores.csv | $(OUTDIR)
+$(OUTDIR)/figure2_gwa_loadings.pdf: analysis/figure2_gwa_quadrant.py data/llm-judge/judge_loadings.jsonl data/gwa-scores/gwa_welfare_scores.csv | $(OUTDIR)
 	$(ANALYSIS).figure2_gwa_quadrant
 
-$(OUTDIR)/figure3_pareto_ecdf.pdf: analysis/figure3_pareto_ecdf.py data/welfare.csv | $(OUTDIR)
+$(OUTDIR)/figure3_pareto_ecdf.pdf: analysis/figure3_pareto_ecdf.py data/item-level-evals/welfare.csv | $(OUTDIR)
 	$(ANALYSIS).figure3_pareto_ecdf
 
-$(OUTDIR)/table1_cost_quantiles.tex: analysis/table1_cost_quantiles.py data/cost.csv | $(OUTDIR)
+$(OUTDIR)/table1_cost_quantiles.tex: analysis/table1_cost_quantiles.py data/item-level-evals/cost.csv | $(OUTDIR)
 	$(ANALYSIS).table1_cost_quantiles
 
-$(OUTDIR)/table2_noise_quantiles.tex: analysis/table2_noise_quantiles.py data/noise.csv | $(OUTDIR)
+$(OUTDIR)/table2_noise_quantiles.tex: analysis/table2_noise_quantiles.py data/item-level-evals/noise.csv | $(OUTDIR)
 	$(ANALYSIS).table2_noise_quantiles
 
-$(OUTDIR)/table4_noise_decomposition.tex: analysis/table4_noise_decomposition.py data/item_margins.parquet | $(OUTDIR)
+$(OUTDIR)/table4_noise_decomposition.tex: analysis/table4_noise_decomposition.py data/item-level-evals/item_margins.parquet | $(OUTDIR)
 	$(ANALYSIS).table4_noise_decomposition
 
 # Re-run the LLM-as-judge GWA loadings. Costs real money; defaults to N_ITEMS=1
@@ -55,10 +55,10 @@ refresh-judge:
 #          (Finding 1) and math-vs-general welfare gap (Finding 2).
 robustness: robustness-set1 robustness-set2
 
-robustness-set1: analysis/robustness_set1.py data/judge_loadings.jsonl data/judge_loadings_openai.jsonl data/gwa_welfare_scores.csv data/gwa_welfare_scores_mean.csv | $(OUTDIR)
+robustness-set1: analysis/robustness_set1.py data/llm-judge/judge_loadings.jsonl data/llm-judge/judge_loadings_openai.jsonl data/gwa-scores/gwa_welfare_scores.csv data/gwa-scores/gwa_welfare_scores_mean.csv | $(OUTDIR)
 	$(ANALYSIS).robustness_set1
 
-robustness-set2: analysis/robustness_set2.py data/heldout_raters/heldout_28_items.json data/heldout_raters/family_map.json data/gwa_welfare_scores.csv | $(OUTDIR)
+robustness-set2: analysis/robustness_set2.py data/human-labels/heldout_28_items.json data/human-labels/family_map.json data/gwa-scores/gwa_welfare_scores.csv | $(OUTDIR)
 	$(ANALYSIS).robustness_set2
 
 clean:

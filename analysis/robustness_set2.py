@@ -14,10 +14,10 @@ on the same 28 items, then report:
     composition, % math items dominated by ≥1 general item.
 
 Reads:
-  data/heldout_raters/heldout_28_items.json
-  data/heldout_raters/family_map.json
-  data/heldout_raters/{A1,A2,claude3ex}_{automation,augmentation}.jsonl
-  data/gwa_welfare_scores.csv
+  data/human-labels/heldout_28_items.json
+  data/human-labels/family_map.json
+  data/human-labels/{A1,A2,claude3ex}_{automation,augmentation}.jsonl
+  data/gwa-scores/gwa_welfare_scores.csv
 
 Writes:
   outputs/robustness_set2_finding1_loading_mass.csv
@@ -35,8 +35,8 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-RATER_DIR = DATA / "heldout_raters"
-WELFARE_CSV = DATA / "gwa_welfare_scores.csv"
+RATER_DIR = DATA / "human-labels"
+WELFARE_CSV = DATA / "gwa-scores" / "gwa_welfare_scores.csv"
 OUT = ROOT / "outputs"
 
 THRESHOLD = 3.0

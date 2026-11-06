@@ -12,12 +12,12 @@ Inputs (relative to $LFS_BASE):
   welfare_judge/gwa_1pct.jsonl             — judge top-k GWA loadings.
   cost_noise_summaries.jsonl               — cached LLM topic summaries.
 
-Outputs (written to data/):
-  noise.csv             — items with keeps_noise == True, with rank CI cols.
-  cost.csv              — items with keeps_cost == True, with rank CI cols.
-  welfare.csv           — welfare-judged items, per-judge P_auto / P_aug.
-  judge_loadings.csv    — per (item, judge, perspective) top-k GWA list.
-  item_topics.csv       — short LLM topic summary per (task, doc_id).
+Outputs (written under data/):
+  item-level-evals/noise.csv    — items with keeps_noise == True, with rank CI cols.
+  item-level-evals/cost.csv     — items with keeps_cost == True, with rank CI cols.
+  item-level-evals/welfare.csv  — welfare-judged items, per-judge P_auto / P_aug.
+  llm-judge/judge_loadings.csv  — per (item, judge, perspective) top-k GWA list.
+  llm-judge/item_topics.csv     — short LLM topic summary per (task, doc_id).
 
 Run:
   LFS_BASE=/path/to/lfs python -m analysis.build_intermediate_csvs
@@ -175,7 +175,8 @@ def assemble_welfare(path: Path) -> pd.DataFrame:
 def main() -> None:
     if LFS_BASE is None:
         raise SystemExit("Set LFS_BASE to the directory holding the raw cost/noise/welfare panels.")
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    for sub in ("item-level-evals", "llm-judge"):
+        (OUT_DIR / sub).mkdir(parents=True, exist_ok=True)
 
     master_path = LFS_BASE / "cost_noise_4B" / "items_master.jsonl"
     rank_ci_path = LFS_BASE / "cost_noise_4B" / "items_with_rank_ci.jsonl"
@@ -195,17 +196,17 @@ def main() -> None:
     loadings = assemble_judge_loadings(loadings_path)
     topics = assemble_topics(topics_path)
 
-    noise.to_csv(OUT_DIR / "noise.csv", index=False)
-    cost.to_csv(OUT_DIR / "cost.csv", index=False)
-    welfare.to_csv(OUT_DIR / "welfare.csv", index=False)
-    loadings.to_csv(OUT_DIR / "judge_loadings.csv", index=False)
-    topics.to_csv(OUT_DIR / "item_topics.csv", index=False)
+    noise.to_csv(OUT_DIR / "item-level-evals" / "noise.csv", index=False)
+    cost.to_csv(OUT_DIR / "item-level-evals" / "cost.csv", index=False)
+    welfare.to_csv(OUT_DIR / "item-level-evals" / "welfare.csv", index=False)
+    loadings.to_csv(OUT_DIR / "llm-judge" / "judge_loadings.csv", index=False)
+    topics.to_csv(OUT_DIR / "llm-judge" / "item_topics.csv", index=False)
 
-    print(f"wrote {OUT_DIR / 'noise.csv'}            rows={len(noise):>6,}")
-    print(f"wrote {OUT_DIR / 'cost.csv'}             rows={len(cost):>6,}")
-    print(f"wrote {OUT_DIR / 'welfare.csv'}          rows={len(welfare):>6,}")
-    print(f"wrote {OUT_DIR / 'judge_loadings.csv'}   rows={len(loadings):>6,}")
-    print(f"wrote {OUT_DIR / 'item_topics.csv'}      rows={len(topics):>6,}")
+    print(f"wrote {OUT_DIR / 'item-level-evals' / 'noise.csv'}            rows={len(noise):>6,}")
+    print(f"wrote {OUT_DIR / 'item-level-evals' / 'cost.csv'}             rows={len(cost):>6,}")
+    print(f"wrote {OUT_DIR / 'item-level-evals' / 'welfare.csv'}          rows={len(welfare):>6,}")
+    print(f"wrote {OUT_DIR / 'llm-judge' / 'judge_loadings.csv'}   rows={len(loadings):>6,}")
+    print(f"wrote {OUT_DIR / 'llm-judge' / 'item_topics.csv'}      rows={len(topics):>6,}")
 
 
 if __name__ == "__main__":

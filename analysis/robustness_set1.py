@@ -17,10 +17,10 @@ we recompute (w_auto, w_aug) for the same 317 items and report:
   • The "% math items dominated by ≥1 general item" Finding-2 statistic
 
 Reads:
-  data/judge_loadings.jsonl         — Claude headline judge.
-  data/judge_loadings_openai.jsonl  — OpenAI judge variant.
-  data/gwa_welfare_scores.csv       — per-GWA p_auto_15 / p_aug_15.
-  data/gwa_welfare_scores_mean.csv  — alternative per-GWA aggregation
+  data/llm-judge/judge_loadings.jsonl         — Claude headline judge.
+  data/llm-judge/judge_loadings_openai.jsonl  — OpenAI judge variant.
+  data/gwa-scores/gwa_welfare_scores.csv       — per-GWA p_auto_15 / p_aug_15.
+  data/gwa-scores/gwa_welfare_scores_mean.csv  — alternative per-GWA aggregation
                                       (flat mean of A_w / H_w rather than
                                       the ≥3.5 proportion).
 
@@ -40,8 +40,8 @@ from scipy import stats
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT = ROOT / "outputs"
-WELFARE_CSV = DATA / "gwa_welfare_scores.csv"
-WELFARE_MEAN_CSV = DATA / "gwa_welfare_scores_mean.csv"
+WELFARE_CSV = DATA / "gwa-scores" / "gwa_welfare_scores.csv"
+WELFARE_MEAN_CSV = DATA / "gwa-scores" / "gwa_welfare_scores_mean.csv"
 DEFAULT_OUT = OUT / "robustness_set1.csv"
 
 
@@ -184,9 +184,9 @@ def compare(default_df: pd.DataFrame, variant_df: pd.DataFrame) -> dict[str, flo
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--claude_jsonl", type=Path,
-                    default=DATA / "judge_loadings.jsonl")
+                    default=DATA / "llm-judge" / "judge_loadings.jsonl")
     ap.add_argument("--openai_jsonl", type=Path,
-                    default=DATA / "judge_loadings_openai.jsonl")
+                    default=DATA / "llm-judge" / "judge_loadings_openai.jsonl")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = ap.parse_args()
 

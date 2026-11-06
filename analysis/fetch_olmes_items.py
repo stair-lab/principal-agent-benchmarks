@@ -7,10 +7,10 @@ needs. The OLMES item set is not part of this paper's contributions and is
 fetched from upstream (https://github.com/allenai/olmes) on demand.
 
 Reads:
-  data/welfare.csv          — provides the (task, doc_id) pairs to fetch.
+  data/item-level-evals/welfare.csv          — provides the (task, doc_id) pairs to fetch.
 
 Writes:
-  data/items.jsonl          — one row per item: {task, doc_id, prompt, choices}.
+  data/llm-judge/items.jsonl          — one row per item: {task, doc_id, prompt, choices}.
 
 Run:
   pip install lm-eval
@@ -40,12 +40,12 @@ def main() -> None:
             "Then: python -m analysis.fetch_olmes_items"
         )
 
-    welfare = pd.read_csv(DATA / "welfare.csv")
+    welfare = pd.read_csv(DATA / "item-level-evals" / "welfare.csv")
     by_task: dict[str, list[int]] = defaultdict(list)
     for _, r in welfare.iterrows():
         by_task[r["task"]].append(int(r["doc_id"]))
 
-    out_path = DATA / "items.jsonl"
+    out_path = DATA / "llm-judge" / "items.jsonl"
     n_total = sum(len(v) for v in by_task.values())
     print(f"Fetching {n_total} items across {len(by_task)} tasks via lm-evaluation-harness...")
 

@@ -6,7 +6,7 @@ Left panel  (2/3 width): scatter with global Pareto frontier highlighted.
 Right column: marginal ECDFs for w_auto (top) and w_aug (bottom).
 
 Reads:
-  data/welfare.csv  — 317 welfare-judged items, columns task, doc_id,
+  data/item-level-evals/welfare.csv  — 317 welfare-judged items, columns task, doc_id,
                       dataset_family, w_auto, w_aug.
 
 Writes:
@@ -73,7 +73,7 @@ FS_ANNOT = 13
 
 
 def load_items() -> pd.DataFrame:
-    df = pd.read_csv(DATA / "welfare.csv")
+    df = pd.read_csv(DATA / "item-level-evals" / "welfare.csv")
     df = df[df[X_COL].notna() & df[Y_COL].notna()].copy().reset_index(drop=True)
     # Rescale to [1,5] using the formula's theoretical bounds (data-independent).
     # w = Σ_{k=1..5} (1/k) · p_{[1,5]} with p ∈ [1,5] gives w ∈ [H_5, 5·H_5];

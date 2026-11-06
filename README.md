@@ -12,7 +12,11 @@ Code and per-item data to reproduce all figures and tables in:
 
 ```
 .
-├── data/        Per-item primary outputs (CSV) — sufficient for all figures/tables.
+├── data/        Shipped inputs — sufficient for all figures/tables.
+│   ├── item-level-evals/  Per-item noise, cost, welfare, and margin results.
+│   ├── llm-judge/         LLM-judge GWA loadings and LLM-generated item topics.
+│   ├── human-labels/      Held-out rater study (2 human raters + Claude baseline).
+│   └── gwa-scores/        Per-GWA WORKBank welfare scores.
 ├── analysis/    One script per paper artifact; reads only data/.
 │                Plus build_intermediate_csvs.py (regenerates data/),
 │                fetch_olmes_items.py (materializes items.jsonl), and
@@ -29,24 +33,26 @@ pip install -e .
 make all     # writes outputs/figureN.{pdf,png}, outputs/tableN.tex
 ```
 
-`make all` runs only `analysis/` — the input is the shipped `data/*.csv` and
-`data/item_margins.parquet`. It does not require GPU access, the raw evaluation
-panels, or LLM API keys. Reproduces Figures 2 and 3, Tables 1, 2, and 4.
+`make all` runs only `analysis/` — the input is the shipped files under `data/`.
+It does not require GPU access, the raw evaluation panels, or LLM API keys. Reproduces Figures 2 and 3, Tables 1, 2, and 4.
 
 ## Data files in `data/`
 
 | File | Rows | Description |
 |---|---:|---|
+| **`item-level-evals/`** | | |
 | `noise.csv` | 20,206 | Per-item across-seed noise on PolyPythias 410M (8 seeds × 10 checkpoints), with bootstrap rank CIs. |
 | `cost.csv`  | 14,908 | Per-item OLS slopes and dollar costs on EvoLM 4B (PT/SFT/RL grids), with bootstrap rank CIs. |
 | `welfare.csv` | 317 | Per-item welfare scores `w_auto`, `w_aug` from no-breadth aggregation of LLM-judge top-5 GWA loadings × WORKBank shares. |
-| `gwa_welfare_scores.csv` | 27 | Per-GWA p_auto/p_aug (and rescaled p_auto_15/p_aug_15 used by Figure 2). 24 retained, 3 dropped for n<5. |
-| `gwa_welfare_scores_mean.csv` | 27 | Alternative per-GWA aggregation (flat mean of A_w / H_w); input to `make robustness-set1`. |
+| `item_margins.parquet` | 19,999 | Per-item gold-vs-runner-up log-prob margins on the 410M panel (input to Table 4). |
+| **`llm-judge/`** | | |
 | `judge_loadings.jsonl` | 634 | One row per (item, perspective) — Claude's top-5 GWA ranking with rationale. |
 | `judge_loadings_openai.jsonl` | 634 | OpenAI judge variant; input to `make robustness-set1`. |
-| `heldout_raters/` | 8 files | 28 held-out items × 3 raters (A1, A2, claude3ex) × 2 perspectives; input to `make robustness-set2`. |
 | `item_topics.csv` | 105 | Short LLM-generated topic phrases for items appearing in the paper's quantile tables. |
-| `item_margins.parquet` | 19,999 | Per-item gold-vs-runner-up log-prob margins on the 410M panel (input to Table 4). |
+| **`human-labels/`** | 8 files | 28 held-out items × 3 raters (human raters A1, A2, plus the claude3ex LLM baseline) × 2 perspectives; input to `make robustness-set2`. |
+| **`gwa-scores/`** | | |
+| `gwa_welfare_scores.csv` | 27 | Per-GWA p_auto/p_aug (and rescaled p_auto_15/p_aug_15 used by Figure 2). 24 retained, 3 dropped for n<5. |
+| `gwa_welfare_scores_mean.csv` | 27 | Alternative per-GWA aggregation (flat mean of A_w / H_w); input to `make robustness-set1`. |
 
 Each is keyed by `(task, doc_id)` (and `gwa` / `judge` / `perspective` where
 applicable). Schema details are in `data/README.md`.
@@ -92,7 +98,8 @@ pip install -e .[refresh-judge]
 cp env.example .env && edit .env  # fill in OPENAI_API_KEY, ANTHROPIC_API_KEY
 source .env
 
-# 1. Materialize prompts + choices for the items in welfare.csv.
+# 1. Materialize prompts + choices for the items in item-level-evals/welfare.csv
+#    (written to data/llm-judge/items.jsonl).
 #    Reads OLMES task definitions from lm-evaluation-harness; not part of
 #    this paper's contributions.
 python -m analysis.fetch_olmes_items
@@ -104,13 +111,13 @@ make refresh-judge JUDGE=openai PERSPECTIVE=automation N_ITEMS=50
 python -m analysis.refresh_judge --all            # full re-run
 ```
 
-The output is written to `data/judge_loadings_refreshed.jsonl`; replace
-`data/judge_loadings.csv` with it (and re-run `analysis/build_intermediate_csvs.py`)
+The output is written to `data/llm-judge/judge_loadings_refreshed.jsonl`; replace
+`data/llm-judge/judge_loadings.jsonl` with it (and re-run `analysis/build_intermediate_csvs.py`)
 to flow the new loadings through to figures and tables.
 
 ## Re-running the upstream chain end-to-end
 
-`analysis/build_intermediate_csvs.py` rebuilds `data/*.csv` from raw evaluation
+`analysis/build_intermediate_csvs.py` rebuilds the CSVs under `data/` from raw evaluation
 panels. It is **not** required for `make all`. Required inputs (not shipped):
 
 - **PolyPythias 410M** (`EleutherAI/pythia-410m-seed{1..8}`) — OLMES per-item

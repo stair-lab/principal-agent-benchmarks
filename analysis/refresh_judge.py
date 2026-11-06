@@ -2,10 +2,10 @@
 Re-run the LLM-as-judge GWA loadings on a set of OLMES items.
 
 Reads:
-  data/items.jsonl          — produced by analysis/fetch_olmes_items.py.
+  data/llm-judge/items.jsonl          — produced by analysis/fetch_olmes_items.py.
                               One row per item with {task, doc_id, prompt, choices}.
 Writes:
-  data/judge_loadings_refreshed.jsonl  — one row per (item, judge, perspective).
+  data/llm-judge/judge_loadings_refreshed.jsonl  — one row per (item, judge, perspective).
 
 Costs real money. Default behaviour is to do ONE call so you can verify your
 API keys work before committing to the full run.
@@ -484,10 +484,10 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=1,
                     help="Number of items to score (default: 1, smoke test).")
     ap.add_argument("--all", action="store_true",
-                    help="Score every item in data/items.jsonl (overrides --n).")
-    ap.add_argument("--items", type=Path, default=DATA / "items.jsonl")
+                    help="Score every item in data/llm-judge/items.jsonl (overrides --n).")
+    ap.add_argument("--items", type=Path, default=DATA / "llm-judge" / "items.jsonl")
     ap.add_argument("--out", type=Path,
-                    default=DATA / "judge_loadings_refreshed.jsonl")
+                    default=DATA / "llm-judge" / "judge_loadings_refreshed.jsonl")
     args = ap.parse_args()
 
     api_key_env = "ANTHROPIC_API_KEY" if args.judge == "claude" else "OPENAI_API_KEY"

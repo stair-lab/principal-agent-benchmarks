@@ -7,9 +7,9 @@ Per-GWA axes are the bare WORKBank shares rescaled to [1, 5]
 Claude top-5 GWA ranking includes that GWA.
 
 Reads:
-  data/judge_loadings.jsonl   — one row per (item, perspective): the LLM-judge's
+  data/llm-judge/judge_loadings.jsonl   — one row per (item, perspective): the LLM-judge's
                                 top-5 ranked_gwa_ids.
-  data/gwa_welfare_scores.csv — 24 retained GWAs with p_auto_15, p_aug_15.
+  data/gwa-scores/gwa_welfare_scores.csv — 24 retained GWAs with p_auto_15, p_aug_15.
 
 Writes:
   outputs/figure2_gwa_loadings.{png,pdf}
@@ -362,9 +362,9 @@ def main():
     ap.add_argument("--top_k", type=int, default=5)
     args = ap.parse_args()
 
-    rows = [json.loads(l) for l in (DATA / "judge_loadings.jsonl").open()]
+    rows = [json.loads(l) for l in (DATA / "llm-judge" / "judge_loadings.jsonl").open()]
 
-    gwa = pd.read_csv(DATA / "gwa_welfare_scores.csv")
+    gwa = pd.read_csv(DATA / "gwa-scores" / "gwa_welfare_scores.csv")
     gwa = gwa[~gwa["dropped"]].reset_index(drop=True)
     kept_gwas = gwa["concept_id"].tolist()
 

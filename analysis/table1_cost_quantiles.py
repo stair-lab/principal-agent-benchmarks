@@ -2,8 +2,8 @@
 Table 1: Cost-ranking quantile bands at 4B scale, 7 items per quantile.
 
 Reads:
-  data/cost.csv         — items passing cost eligibility, with rank CIs.
-  data/item_topics.csv  — short LLM topic summary per (task, doc_id).
+  data/item-level-evals/cost.csv         — items passing cost eligibility, with rank CIs.
+  data/llm-judge/item_topics.csv  — short LLM topic summary per (task, doc_id).
 
 Writes:
   outputs/table1_cost_quantiles.tex
@@ -94,10 +94,10 @@ def render_cost_table(df: pd.DataFrame, picked: pd.DataFrame,
 
 
 def main():
-    cost = pd.read_csv(DATA / "cost.csv")
+    cost = pd.read_csv(DATA / "item-level-evals" / "cost.csv")
     cost = cost[cost["cost_min_usd"].notna() & (cost["cost_min_usd"] > 0)].reset_index(drop=True)
 
-    topics = pd.read_csv(DATA / "item_topics.csv")
+    topics = pd.read_csv(DATA / "llm-judge" / "item_topics.csv")
     summaries = {(r["task"], int(r["doc_id"])): r["topic"]
                  for _, r in topics.iterrows()}
 

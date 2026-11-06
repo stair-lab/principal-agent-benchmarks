@@ -2,8 +2,8 @@
 Table 2: Noise-ranking quantile bands at 4B scale, 7 items per quantile.
 
 Reads:
-  data/noise.csv        — items passing noise eligibility, with rank CIs.
-  data/item_topics.csv  — short LLM topic summary per (task, doc_id).
+  data/item-level-evals/noise.csv        — items passing noise eligibility, with rank CIs.
+  data/llm-judge/item_topics.csv  — short LLM topic summary per (task, doc_id).
 
 Writes:
   outputs/table2_noise_quantiles.tex
@@ -88,8 +88,8 @@ def render_noise_table(df: pd.DataFrame, picked: pd.DataFrame,
 
 
 def main():
-    noise = pd.read_csv(DATA / "noise.csv")
-    topics = pd.read_csv(DATA / "item_topics.csv")
+    noise = pd.read_csv(DATA / "item-level-evals" / "noise.csv")
+    topics = pd.read_csv(DATA / "llm-judge" / "item_topics.csv")
     summaries = {(r["task"], int(r["doc_id"])): r["topic"]
                  for _, r in topics.iterrows()}
 
